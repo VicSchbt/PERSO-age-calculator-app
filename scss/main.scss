@@ -85,6 +85,9 @@ body {
 					letter-spacing: 0.1rem;
 					text-transform: uppercase;
 					font-size: 0.75rem;
+					&.error {
+						color: $light-red;
+					}
 				}
 				input {
 					width: 100%;

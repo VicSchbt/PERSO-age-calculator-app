@@ -78,6 +78,9 @@ body {
   text-transform: uppercase;
   font-size: 0.75rem;
 }
+.calculator-date-form__date-selectors div label.error {
+  color: hsl(0, 100%, 67%);
+}
 .calculator-date-form__date-selectors div input {
   width: 100%;
   padding: 0.5rem;
