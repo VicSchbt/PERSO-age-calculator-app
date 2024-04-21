@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+		<title>Frontend Mentor | Age calculator app</title>
+		</style>
+	</head>
+	<body>
+		<main class="calculator">
+			<form class="calculator-date-form">
+				<div class="calculator-date-form__date-selectors">
+					<div>
+						<label for="calculator-date-form__day">Day</label>
+						<input
+							type="number"
+							name="calculator-date-form__day"
+							id="calculator-date-form__day"
+							placeholder="DD"
+						/>
+					</div>
+					<div>
+						<label for="calculator-date-form__month">Month</label>
+						<input
+							type="number"
+							name="calculator-date-form__month"
+							id="calculator-date-form__month"
+							placeholder="MM"
+						/>
+					</div>
+					<div>
+						<label for="calculator-date-form__year">Year</label>
+						<input
+							type="number"
+							name="calculator-date-form__year"
+							id="calculator-date-form__year"
+							placeholder="YYYY"
+						/>
+					</div>
+				</div>
+				<div class="calculator-date-form__submit">
+					<div class="calculator-date-form__divider"></div>
+					<button type="submit">
+						<img
+							src="/assets/images/icon-arrow.svg"
+							alt="Submit"
+						/>
+					</button>
+				</div>
+			</form>
+			<section class="calculator-result">
+				<p class="calculator-result__years"><span>--</span> years</p>
+				<p class="calculator-result__months"><span>--</span> months</p>
+				<p class="calculator-result__days"><span>--</span> days</p>
+			</section>
+		</main>
+
+    <script src="./js/app.js" defer></script>
+	</body>
+</html>
