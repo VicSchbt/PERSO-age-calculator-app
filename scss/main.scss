@@ -15,7 +15,7 @@
 }
 @font-face {
 	font-family: 'Poppins';
-	src: url('/assets/fonts/Poppins-RegularItalic.ttf');
+	src: url('/assets/fonts/Poppins-Italic.ttf');
 	font-weight: 400;
 	font-style: italic;
 }
@@ -59,7 +59,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: stretch;
+	align-items: center;
 	padding: 1rem;
 }
 
@@ -68,11 +68,15 @@ body {
 	padding: 3rem 2rem;
 	border-radius: 2rem;
 	border-bottom-right-radius: 5rem;
+	max-width: 600px;
 	&-date-form {
 		&__date-selectors {
 			display: flex;
 			justify-content: flex-start;
 			gap: 1rem;
+			@media screen and (min-width: 450px) {
+				width: 75%;
+			}
 			div {
 				display: flex;
 				flex-direction: column;
@@ -111,6 +115,19 @@ body {
 					&:hover {
 						cursor: pointer;
 					}
+					&.error {
+						border-color: $light-red;
+					}
+				}
+				p {
+					font-size: 0.75rem;
+					color: $light-red;
+					font-style: italic;
+					transform: scaleY(1);
+					transition: transform 0.5s;
+					&.hide {
+						transform: scaleY(0);
+					}
 				}
 			}
 		}
@@ -135,6 +152,14 @@ body {
 				transform: translate(-50%, -50%);
 				cursor: pointer;
 				transition: background-color 0.5s;
+				@media screen and (min-width: 450px) {
+					height: 4rem;
+					width: 4rem;
+					border-radius: 2rem;
+					left: auto;
+					right: 0%;
+					transform: translateY(-50%);
+				}
 				&:hover {
 					background-color: $off-black;
 				}
@@ -153,9 +178,14 @@ body {
 	&-result {
 		p {
 			font-size: 3rem;
+			line-height: 3.5rem;
 			font-weight: 800;
 			font-style: italic;
 			color: $off-black;
+			@media screen and (min-width: 450px) {
+				font-size: 5rem;
+				line-height: 5.5rem;
+			}
 			span {
 				color: $purple;
 			}

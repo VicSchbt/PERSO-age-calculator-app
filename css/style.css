@@ -15,7 +15,7 @@
 }
 @font-face {
   font-family: "Poppins";
-  src: url("/assets/fonts/Poppins-RegularItalic.ttf");
+  src: url("/assets/fonts/Poppins-Italic.ttf");
   font-weight: 400;
   font-style: italic;
 }
@@ -49,7 +49,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
   padding: 1rem;
 }
 
@@ -58,11 +58,17 @@ body {
   padding: 3rem 2rem;
   border-radius: 2rem;
   border-bottom-right-radius: 5rem;
+  max-width: 600px;
 }
 .calculator-date-form__date-selectors {
   display: flex;
   justify-content: flex-start;
   gap: 1rem;
+}
+@media screen and (min-width: 450px) {
+  .calculator-date-form__date-selectors {
+    width: 75%;
+  }
 }
 .calculator-date-form__date-selectors div {
   display: flex;
@@ -104,6 +110,19 @@ body {
 .calculator-date-form__date-selectors div input:hover {
   cursor: pointer;
 }
+.calculator-date-form__date-selectors div input.error {
+  border-color: hsl(0, 100%, 67%);
+}
+.calculator-date-form__date-selectors div p {
+  font-size: 0.75rem;
+  color: hsl(0, 100%, 67%);
+  font-style: italic;
+  transform: scaleY(1);
+  transition: transform 0.5s;
+}
+.calculator-date-form__date-selectors div p.hide {
+  transform: scaleY(0);
+}
 .calculator-date-form__submit {
   position: relative;
   height: 3rem;
@@ -127,6 +146,16 @@ body {
   cursor: pointer;
   transition: background-color 0.5s;
 }
+@media screen and (min-width: 450px) {
+  .calculator-date-form__submit button {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 2rem;
+    left: auto;
+    right: 0%;
+    transform: translateY(-50%);
+  }
+}
 .calculator-date-form__submit button:hover {
   background-color: hsl(0, 0%, 8%);
 }
@@ -141,9 +170,16 @@ body {
 }
 .calculator-result p {
   font-size: 3rem;
+  line-height: 3.5rem;
   font-weight: 800;
   font-style: italic;
   color: hsl(0, 0%, 8%);
+}
+@media screen and (min-width: 450px) {
+  .calculator-result p {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
 }
 .calculator-result p span {
   color: hsl(259, 100%, 65%);
